@@ -526,7 +526,13 @@ a:focus {
 }
 
 .about_section .img-box img {
+  border-radius:15px;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
   width: 100%;
+  max-width: 800px;
+  min-height: 450px;
+  max-height: 450px;
 }
 
 .trending_section {
@@ -630,6 +636,7 @@ a:focus {
 }
 
 .trending_section .img_container .box .img-box img {
+  max-height: 300px;
   width: 100%;
 }
 
