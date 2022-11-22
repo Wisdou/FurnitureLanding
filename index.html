@@ -41,17 +41,17 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#furniture_header">Главная<span
+                                <a id="furniture_header_button" class="nav-link" href="#">Главная<span
                                             class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#what_furniture">Что делаем</a>
+                                <a id="what_furniture_button" class="nav-link" href="#">Что делаем</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#furniture_about">Материалы</a>
+                                <a id="furniture_about_button" class="nav-link" href="#">Материалы</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#how_furniture">Как мы работаем</a>
+                                <a id="how_furniture_button" class="nav-link" href="#">Как мы работаем</a>
                             </li>
                         </ul>
                     </div>
@@ -98,9 +98,9 @@
                                             <a href="#" class="btn-1">
                                                     Информация о нас
                                                 </a>
-                                            <a href="#furniture_contacts" class="btn-2">
+                                            <a id="contact_button" href="#" class="btn-2">
                                                     Контакты
-                                                </a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -572,32 +572,44 @@
                     <div class="col-md-6">
                         <div class="collapse show" id="collapseOneM" aria-labelledby="headingOneM" data-parent="#materials">
                             <div class="img-box">
-                                <img src="images\_materials\img_1.jpg" alt="">
+                                <a href="images\_materials\img_1.jpg" target="_blank">
+                                    <img src="images\_materials\img_1.jpg" alt="">
+                                </a>
                             </div>
                         </div>
                         <div class="collapse" id="collapseTwoM" aria-labelledby="headingTwoM" data-parent="#materials">
                             <div class="img-box">
-                                <img src="images\_materials\img_2.jpg" alt="">
+                                <a href="images\_materials\img_7.jpg" target="_blank">
+                                    <img src="images\_materials\img_7.jpg" alt="">
+                                </a>
                             </div>
                         </div>
                         <div class="collapse" id="collapseThreeM" aria-labelledby="headingThreeM" data-parent="#materials">
                             <div class="img-box">
-                                <img src="images\_materials\img_3.jpg" alt="">
+                                <a href="images\_materials\img_8.jpg" target="_blank">
+                                    <img src="images\_materials\img_8.jpg" alt="">
+                                </a>
                             </div>
                         </div>
                         <div class="collapse" id="collapseFourM" aria-labelledby="headingFourM" data-parent="#materials">
                             <div class="img-box">
-                                <img src="images\_materials\img_4.jpg" alt="">
+                                <a href="images\_materials\img_4.jpg" target="_blank">
+                                    <img src="images\_materials\img_4.jpg" alt="">
+                                </a>
                             </div>
                         </div>
                         <div class="collapse" id="collapseFiveM" aria-labelledby="headingFiveM" data-parent="#materials">
                             <div class="img-box">
-                                <img src="images\_materials\img_5.jpg" alt="">
+                                <a href="images\_materials\img_5.jpg" target="_blank">
+                                    <img src="images\_materials\img_5.jpg" alt="">
+                                </a>
                             </div>
                         </div>
                         <div class="collapse" id="collapseSixM" aria-labelledby="headingSixM" data-parent="#materials">
                             <div class="img-box">
-                                <img src="images\_materials\img_6.jpg" alt="">
+                                <a href="images\_materials\img_6.jpg" target="_blank">
+                                    <img src="images\_materials\img_6.jpg" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -854,7 +866,32 @@
             a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
             console.log(indicators);
 
-        })
+        });
+        $("#furniture_header_button").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#furniture_header").offset().top
+            }, 1000);
+        });
+        $("#what_furniture_button").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#what_furniture").offset().top
+            }, 1000);
+        });
+        $("#furniture_about_button").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#furniture_about").offset().top
+            }, 1000);
+        });
+        $("#how_furniture_button").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#how_furniture").offset().top
+            }, 1000);
+        });
+        $("#contact_button").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#furniture_contacts").offset().top
+            }, 1000);
+        });
     </script>
 
 </body>
